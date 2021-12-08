@@ -29,7 +29,7 @@ github_username:  steve-putala
 
 # Build settings
 #remote_theme: elotroalex/ed
-theme: minima
+theme: jekyll-theme-dinky
 plugins:
   - jekyll-feed
 #  - jekyll-remote-theme
