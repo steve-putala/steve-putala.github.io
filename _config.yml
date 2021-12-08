@@ -32,7 +32,7 @@ github_username:  steve-putala
 theme: jekyll-theme-dinky
 plugins:
   - jekyll-feed
-#  - jekyll-remote-theme
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
