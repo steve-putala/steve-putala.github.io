@@ -10,4 +10,4 @@ permalink: /projects/
 
 ## Projects
 
-[Work Timer](work-timer) - A timer tool I use track hours worked
+[Work Timer](work-timer/index.html) - A timer tool I use track hours worked
