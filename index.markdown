@@ -2,4 +2,4 @@
 layout: home
 ---
 
-Portfolio and resume website
+A portflio website slowly coming together.
