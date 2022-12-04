@@ -36,6 +36,11 @@ html {
     background-size: 2em 2em;
     color: $base-color;
     font-size: 17px;
+
+    @media print {
+        background: none;
+        font-size: 12pt;
+    }
 }
 
 img {
@@ -88,8 +93,12 @@ time {
 a {
     color: scale-color( $triad-color-2, $lightness: 30% );
 
-    &:visited {
-        color: scale-color( $triad-color-2, $lightness: 30% );
+    //&:visited {
+    //    color: $triad-color-2;
+    //}
+
+    &:hover {
+        color: scale-color( $triad-color-2, $lightness: 10% );
     }
 }
 
@@ -119,6 +128,10 @@ a {
 
 html {
     font-family: ui-monospace, monospace;
+
+    @media print {
+        font-family: ui-sans-serif, sans-serif;
+    }
 }
 
 div.highlight {
@@ -168,12 +181,21 @@ body {
             margin-top: 0;
             border-radius: 0 0 1.2rem 1.2rem;
         }
+
+        @media print {
+            margin: 0;
+            padding: 0;
+            box-shadow: none;
+        }
     }
 }
 
 header {
 
     padding: .5rem 1.5rem 1rem;
+    @media print {
+        padding: 0;
+    }
 
     a {
         text-decoration: none;
@@ -191,6 +213,10 @@ header {
 
     nav {
         @extend %nav-pipe-separator;
+
+        @media print {
+            display: none;
+        }
     }
 }
 
@@ -209,13 +235,42 @@ section {
             gap: 0.5rem 0.6rem;
         }
     }
+
+    article {
+        margin-bottom: 3rem;
+
+        &:last-child {
+            margin-bottom: 1.5rem;
+        }
+    }
 }
 
 article {
     &.post {
         aside {
-            time {
-                float: right;
+            &.article-tags-header {
+                @include flexbox();
+                flex-direction: row-reverse;
+                flex-wrap: wrap;
+                gap: 0.5rem 3rem;
+                justify-content: flex-end;
+                align-items: flex-start;
+
+                :last-child {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    h2, h3, h4 {
+        a {
+            color: $base-color;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+                color: $base-color;
             }
         }
     }
