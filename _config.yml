@@ -1,0 +1,18 @@
+permalink: /:categories/:slug:output_ext
+
+defaults:
+  - scope:
+      path: "blog"
+      type: "pages"
+    values:
+      layout: "blog"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
