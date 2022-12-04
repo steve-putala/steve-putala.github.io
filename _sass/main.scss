@@ -1,3 +1,7 @@
+$base-color: #0f173e;
+$triad-color-1: adjust-hue($base-color, 60deg);
+$triad-color-2: adjust-hue($base-color, 120deg);
+
 /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 @mixin flexbox() {
     display: -webkit-box;
@@ -30,7 +34,7 @@ html {
     background: #d2d8f4;
     background-image: linear-gradient(rgba(255, 255, 255, .2) 0.1em, transparent 0.1em), linear-gradient(90deg, rgba(255, 255, 255, .2) 0.1em, transparent 0.1em);
     background-size: 2em 2em;
-    color: #0f173e;
+    color: $base-color;
     font-size: 17px;
 }
 
@@ -49,11 +53,24 @@ h1, h2, h3, h4, h5 {
 h1 {
     margin-top: 0;
 }
-ul, ol, p, aside, .highlighter-rouge {
+p, aside, .highlighter-rouge {
     margin: 1.5rem 0 1.5rem 0;
 
     &:first-child {
         margin-top: 0;
+    }
+}
+
+ul, ol {
+    margin: 1.5rem 0 1.5rem 0;
+    margin-left: 1.5rem;
+
+    li {
+        margin: 0 0 .7rem 0;
+    }
+
+    ul, ol {
+        margin: .7rem 0 .7rem 0;
     }
 }
 
@@ -68,6 +85,13 @@ time {
     display: block;
     margin: 0;
 }
+a {
+    color: scale-color( $triad-color-2, $lightness: 30% );
+
+    &:visited {
+        color: scale-color( $triad-color-2, $lightness: 30% );
+    }
+}
 
 %nav-pipe-separator {
     a {
@@ -75,8 +99,8 @@ time {
         /* left padding .3em bigger to account for space character */
         padding: 0 .5em 0 .8em;
         margin: 0;
-        border-left: 1px solid #0f173e;
-        color: #0f173e;
+        border-left: 1px solid $base-color;
+        color: $base-color;
 
         &:first-child {
             padding-left: 0;
@@ -99,8 +123,34 @@ html {
 
 div.highlight {
     padding: 0 1rem;
-    border: 1px solid #0f173e;
+    border: 1px solid $base-color;
     border-radius: 0.3rem;
+    overflow: auto;
+
+    pre {
+
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+
+        @media print {
+            overflow:visible;
+            white-space:pre-wrap;
+        }
+
+        /* @TODO: css code line numbering: https://stackoverflow.com/questions/37373127/css-numbering-using-nth-child */
+        /*
+        code {
+            counter-reset: line;
+
+            span:before {
+                counter-increment: line;
+                content: counter(line);
+                -webkit-user-select: none;
+            }
+        }
+         */
+    }
 }
 
 body {
@@ -127,7 +177,11 @@ header {
 
     a {
         text-decoration: none;
-        color: #0f173e;
+        color: $base-color;
+
+        &:visited {
+            color: $base-color;
+        }
     }
 
     h1 {
@@ -164,6 +218,10 @@ article {
                 float: right;
             }
         }
+    }
+
+    ul.recipe {
+        list-style-type: none;
     }
 }
 
