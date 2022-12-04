@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# {{ page.title }}
+<h1>{{ page.title }}</h1>
 <nav class="pipe-separator">
     Switch view to:
     <a href="index.html"{% if page.url == '/blog/' %} class="active"{% endif %}>Date</a>
