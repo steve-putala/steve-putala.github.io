@@ -11,6 +11,7 @@
         <meta name="author" content="Steve Putala">
         <title>{{ page.title }}</title>
         <link rel="stylesheet" href="/assets/css/styles.css">
+        <script src="https://kit.fontawesome.com/2ac533ff53.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -24,7 +25,18 @@
             {{ content }}
         </section>
         <footer>
-            ©2021-{{ "now" | date: "%Y" }} Steve Putala
+            <p>©2021-{{ "now" | date: "%Y" }} Steve Putala</p>
+            {% if site.data.social-media %}
+            <div class="socials">
+                {% assign sm = site.data.social-media %}
+                {% for entry in sm %}
+                    {% assign key = entry | first %}
+                    {% if sm[key].id %}
+                        <a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}"><i class="fa {{ sm[key].fa-icon }}"></i>{{ sm[key].id }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
         </footer>
     </body>
 </html>
