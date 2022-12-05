@@ -25,9 +25,8 @@
             {{ content }}
         </section>
         <footer>
-            <p>©2021-{{ "now" | date: "%Y" }} Steve Putala</p>
             {% if site.data.social-media %}
-            <div class="socials">
+            <p class="socials">
                 {% assign sm = site.data.social-media %}
                 {% for entry in sm %}
                     {% assign key = entry | first %}
@@ -35,8 +34,13 @@
                         <a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}"><i class="fa {{ sm[key].fa-icon }}"></i>{{ sm[key].id }}</a>
                     {% endif %}
                 {% endfor %}
-            </div>
+            </p>
             {% endif %}
+            <p class="copyleft">
+                <span>This work is licensed under a </span>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+            </p>
+            <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a></p>
         </footer>
     </body>
 </html>

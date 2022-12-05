@@ -43,11 +43,6 @@ html {
     }
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
 h1, h2, h3, h4, h5 {
     margin: 3rem 0 1rem 0;
 
@@ -282,27 +277,38 @@ article {
 
 footer {
 
+    text-align: center;
+
     p {
-        margin-bottom: .7rem;
+        margin: 1rem 0;
     }
 
-    .socials {
+    .socials, .copyleft {
         @include flexbox();
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 0.5rem 1.5rem;
+        justify-content: center;
+
     }
 
-    a {
-        text-decoration: none;
+    .socials {
+        gap: 0.5rem 1.5rem;
 
-        i.fa {
-            color: #777;
-            margin-right: .3em;
-        }
+        a {
+            text-decoration: none;
 
-        &:hover {
-            text-decoration: underline;
+            i.fa {
+                color: #777;
+                margin-right: .3em;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
+    }
+
+    .copyleft {
+        gap: 0.5rem .8rem;
     }
 }
