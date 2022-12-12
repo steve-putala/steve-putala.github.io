@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="/assets/css/styles.css">
         <script src="https://kit.fontawesome.com/2ac533ff53.js" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body class="{{ page.body_class }}">
         <header>
             <h1><a href="/">Steve Putala</a></h1>
             <nav>
@@ -21,9 +21,9 @@
                 <a href="/blog/"{% if page.url contains '/blog/' %} class="active"{% endif %}>Blog</a>
             </nav>
         </header>
-        <section>
+        <div>
             {{ content }}
-        </section>
+        </div>
         <footer>
             {% if site.data.social-media %}
             <p class="socials">
