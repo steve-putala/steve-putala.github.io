@@ -17,6 +17,18 @@ layout: default
     {{ content }}
 
     <footer>
+
         {% include share-to.md %}
+
+        <section>
+            <script src="https://utteranc.es/client.js"
+                repo="steve-putala/steve-putala.github.io"
+                issue-term="pathname"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+            </script>
+        </section>
+
     </footer>
 </article>

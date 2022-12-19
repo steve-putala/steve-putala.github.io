@@ -266,8 +266,10 @@ article {
         }
 
         footer {
-            margin: 3rem 0 1rem 0;
-            text-align: center;
+
+            section {
+                margin: 2rem 0 1rem 0;
+            }
 
             .share_to {
                 @include flexbox();
@@ -275,6 +277,8 @@ article {
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 0.5rem 0.8rem;
+                margin-top: 3rem;
+
 
                 div {
                     @extend %nav-pipe-separator;
