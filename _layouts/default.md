@@ -9,6 +9,10 @@
         <meta name="keywords" content="{{ page.tags | join: ' ' | escape }}">
         <meta name="description" content="{{ page.title | strip_html | strip_newlines | escape }} - {{ page.excerpt | strip_html | strip_newlines | escape }}">
         <meta name="author" content="Steve Putala">
+        <meta property="og:title" content="{{ page.title | strip_html | strip_newlines | escape }}"/>
+        <!--<meta property="og:image" content=""/>-->
+        <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | escape }}"/>
+        <meta property="og:url" content="{{ page.url | absolute_url | uri_escape }}" />
         <title>{{ page.title }}</title>
         <link rel="stylesheet" href="/assets/css/styles.css">
         <script src="https://kit.fontawesome.com/2ac533ff53.js" crossorigin="anonymous"></script>
