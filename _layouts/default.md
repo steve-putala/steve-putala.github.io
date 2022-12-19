@@ -15,15 +15,15 @@
     </head>
     <body class="{{ page.body_class }}">
         <header>
-            <h1><a href="/">Steve Putala</a></h1>
+            <a href="/" class="logo">Steve Putala</a>
             <nav>
                 <a href="/"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
                 <a href="/blog/"{% if page.url contains '/blog/' %} class="active"{% endif %}>Blog</a>
             </nav>
         </header>
-        <div>
+        <main>
             {{ content }}
-        </div>
+        </main>
         <footer>
             {% if site.data.social-media %}
             <p class="socials">

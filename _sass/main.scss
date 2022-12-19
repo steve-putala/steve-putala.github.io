@@ -2,6 +2,8 @@ $base-color: #0f173e;
 $triad-color-1: adjust-hue($base-color, 60deg);
 $triad-color-2: adjust-hue($base-color, 120deg);
 
+$text-gray: #777;
+
 /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 @mixin flexbox() {
     display: -webkit-box;
@@ -84,6 +86,10 @@ h2 {
 time {
     display: block;
     margin: 0;
+    color: $text-gray;
+
+    .fa {
+    }
 }
 a {
     color: scale-color( $triad-color-2, $lightness: 30% );
@@ -108,7 +114,6 @@ img {
         padding: 0 .5em 0 .8em;
         margin: 0;
         border-left: 1px solid $base-color;
-        color: $base-color;
 
         &:first-child {
             padding-left: 0;
@@ -189,7 +194,7 @@ body {
     }
 }
 
-header {
+body > header {
 
     padding: .5rem 1.5rem 1rem;
     @media print {
@@ -205,9 +210,11 @@ header {
         }
     }
 
-    h1 {
+    .logo {
         font-size: 3rem;
         margin-bottom: .2em;
+        display: block;
+        font-weight: bold;
     }
 
     nav {
@@ -219,26 +226,30 @@ header {
     }
 }
 
-body > div {
+body > main {
     padding-bottom: .5em;
 
     nav {
         &.pipe-separator {
             @extend %nav-pipe-separator;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
         &.switch-view {
             @include flexbox();
             flex-direction: row;
             flex-wrap: wrap;
             gap: 0.5rem 0.6rem;
+
+            a {
+                color: $base-color;
+            }
         }
     }
 }
 
 article {
     &.post {
-        aside {
+        header {
             &.article-tags-header {
                 @include flexbox();
                 flex-direction: row-reverse;
@@ -246,9 +257,30 @@ article {
                 gap: 0.5rem 3rem;
                 justify-content: flex-end;
                 align-items: flex-start;
+                margin: 0 0 1.5rem 0;
 
                 :last-child {
                     margin-right: auto;
+                }
+            }
+        }
+
+        footer {
+            margin: 3rem 0 1rem 0;
+            text-align: center;
+
+            .share_to {
+                @include flexbox();
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem 0.8rem;
+
+                div {
+                    @extend %nav-pipe-separator;
+
+                    a {
+                    }
                 }
             }
         }
@@ -271,7 +303,7 @@ article {
     }
 }
 
-footer {
+body > footer {
 
     text-align: center;
 
@@ -292,9 +324,10 @@ footer {
 
         a {
             text-decoration: none;
+            color: $base-color;
 
             i.fa {
-                color: #777;
+                color: $text-gray;
                 margin-right: .3em;
             }
 
@@ -309,16 +342,13 @@ footer {
     }
 }
 
-body.blog-articles {
+body.blog-index {
     .articles {
 
         margin-bottom: 1rem;
 
-        a {
-            display: block;
-            color: $base-color;
-            text-decoration: none;
-            padding: 1rem;
+        .article {
+            padding: 0;
             border-bottom: 2px solid #d2d8f4;
 
             &:last-child {
@@ -334,15 +364,20 @@ body.blog-articles {
             box-shadow: .5rem .5rem .5rem scale-color( #a1aee8, $lightness: 80% );
              */
 
-            &:hover {
-                text-decoration: underline;
-                /*background: linear-gradient( 0deg, #ffffff 0%, scale-color( #d2d8f4, $lightness: 10% ) 100%);*/
+            a {
+                padding: 1rem 0;
+                display: block;
+                color: $base-color;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                    /* background: linear-gradient( -90deg, #ffffff 0%, scale-color( #d2d8f4, $lightness: 10% ) 100%); */
+                }
             }
 
-            article {
-                h2 {
-                    margin-bottom: .3rem;
-                }
+            h2 {
+                margin-bottom: .1rem;
             }
         }
 
