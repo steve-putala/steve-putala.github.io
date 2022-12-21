@@ -57,10 +57,6 @@ h1 {
 }
 p, aside, .highlighter-rouge {
     margin: 1.5rem 0 1.5rem 0;
-
-    &:first-child {
-        margin-top: 0;
-    }
 }
 
 ul, ol {
@@ -105,6 +101,18 @@ a {
 
 img {
     max-width: 100%;
+}
+
+blockquote {
+    border-left: 3px solid $triad-color-1;
+    border-right: 3px solid $triad-color-1;
+    border-radius: 1rem;
+    padding: 1rem 1rem 0.5rem 2rem;
+    margin: 1.5rem 1.5rem;
+
+    p {
+        margin: 1rem 0;
+    }
 }
 
 table {
@@ -201,35 +209,65 @@ html {
     }
 }
 
-div.highlight {
-    padding: 0 1rem;
+.highlighter-rouge {
+    background: #f7f8fd;
     border: 1px solid $base-color;
     border-radius: 0.3rem;
-    overflow: auto;
+    padding: 0 .7rem;
 
-    pre {
+    div.highlight {
+        overflow: auto;
+        background: none;
+        padding: 0 1rem;
 
-        -moz-tab-size: 4;
-        -o-tab-size: 4;
-        tab-size: 4;
+        pre {
 
-        @media print {
-            overflow:visible;
-            white-space:pre-wrap;
-        }
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
 
-        /* @TODO: css code line numbering: https://stackoverflow.com/questions/37373127/css-numbering-using-nth-child */
-        /*
-        code {
-            counter-reset: line;
-
-            span:before {
-                counter-increment: line;
-                content: counter(line);
-                -webkit-user-select: none;
+            @media print {
+                overflow: visible;
+                white-space: pre-wrap;
             }
+
+            /* @TODO: css code line numbering: https://stackoverflow.com/questions/37373127/css-numbering-using-nth-child */
+            /*
+            code {
+                counter-reset: line;
+
+                span:before {
+                    counter-increment: line;
+                    content: counter(line);
+                    -webkit-user-select: none;
+                }
+            }
+             */
         }
-         */
+    }
+}
+
+.message {
+
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+
+    &.error, &.warning {
+        border: 1px solid #bd1f29;
+        color: #bd1f29;
+        background: #fbe5e6;
+    }
+
+    &.notice {
+        border: 1px solid #a38500;
+        color: #756000;
+        background: #fff8d6;
+    }
+
+    &.alert {
+        border: 1px solid #1e761e;
+        color: #1e761e;
+        background: #d6f5d6;
     }
 }
 
@@ -306,6 +344,12 @@ body > main {
             a {
                 color: $base-color;
             }
+        }
+    }
+
+    p, aside, .highlighter-rouge {
+        &:first-child {
+            margin-top: 0;
         }
     }
 }
