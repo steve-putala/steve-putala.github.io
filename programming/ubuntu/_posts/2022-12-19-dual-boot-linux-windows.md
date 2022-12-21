@@ -5,6 +5,11 @@ tags:
   - install
 ---
 
+Notes that I made for myself years ago to dual boot Linux Mint and Windows
+
+**Warning:** These are old notes that I am not maintaining or updating
+{: .message .warning}
+
 Installing Windows and Linux Mint took some time the first time, these are my dual boot notes.
 
 If you'd like to see better notes add a comment below.

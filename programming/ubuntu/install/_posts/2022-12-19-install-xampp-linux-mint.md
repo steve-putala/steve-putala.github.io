@@ -1,9 +1,12 @@
 ---
 title: Install xampp on Linux Mint
-tags: xampp apache mysql install
+tags: xampp apache mysql install php
 ---
 
-Very outdated notes for setting up xampp, these should not be relied upon.
+Notes that I made for myself years ago to install xampp on Linux Mint
+
+**Warning:** These are old notes that I am not maintaining or updating
+{: .message .warning}
 
 ## xampp
 
