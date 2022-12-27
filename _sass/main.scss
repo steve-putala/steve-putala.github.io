@@ -97,6 +97,15 @@ a {
     &:hover {
         color: scale-color( $triad-color-2, $lightness: 10% );
     }
+
+    &.external:after {
+        content: "\f35d";
+        font-family: 'FontAwesome';
+        text-decoration: none;
+        margin-left: .4rem;
+        color: $text-gray;
+        display: inline-block;
+    }
 }
 
 img {
