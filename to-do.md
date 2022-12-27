@@ -18,4 +18,7 @@ published: false
 
 https://davidwalsh.name/javascript-zip
 
+## Get category navigation working better
 
+* https://simpleit.rocks/ruby/jekyll/tutorials/get-a-list-of-categories-based-in-subfolders-in-jekyll/
+* https://simpleit.rocks/ruby/jekyll/tutorials/how-to-create-breadcrumbs-with-hierarchical-categories-in-jekyll/
