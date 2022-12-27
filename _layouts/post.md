@@ -16,6 +16,22 @@ layout: default
     <h1>{{ page.title }}</h1>
     {{ content }}
 
+    {% if page.references %}
+        <section class="references">
+            <h2>References</h2>
+            <ul>
+            {% for reference in page.references %}
+                <li>
+                    {% if reference.text %}
+                        {{ reference.text }}
+                    {% endif %}
+                    <a href="{{ reference.href }}" class="external">{{ reference.link }}</a>
+                </li>
+            {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+
     <footer>
 
         {% include share-to.md %}
