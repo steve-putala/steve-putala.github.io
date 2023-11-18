@@ -20,8 +20,12 @@ Download the latest .iso from <https://ubuntu.com/download/desktop>
 
 ## Start VirtualBox
 
-Add user to the **vboxusers** group. You may need to restart your computer for the group to take effect.
+> I encountered the error "Can't enumerate USB Devices" and fixed it by adding my user to the **vboxusers** group. You may need to restart your computer for the group change to take effect.
+>
+> ![VirtualBox Error Message: Can't enumerate USB Devices](/assets/images/knowledge-base/linux/virtualbox-usb-error.png)
+>
+> ```bash
+> sudo usermod -a -G vboxusers steve
+> ```
 
-```bash
-sudo usermod -a -G vboxusers youruser
-```
+
