@@ -1,6 +1,5 @@
 ---
 title: How to run Ubuntu in VirtualBox
-published: false
 tags:
   - linux
   - install
