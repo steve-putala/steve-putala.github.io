@@ -16,12 +16,12 @@ Install the JetBrains Toolbox App to get all the IDEs easily from <https://www.j
 
 ## Install steps
 
-1) Download tar.gz <https://www.jetbrains.com/toolbox-app/>
-2) Extract to /opt (adjust filename)<br>
+1. Download tar.gz <https://www.jetbrains.com/toolbox-app/>
+2. Extract to /opt (adjust filename)<br>
   `sudo tar -xzf jetbrains-toolbox-1.17.7391.tar.gz -C /opt`
-3) `cd` to binary's directory (adjust path)<br>
+3. `cd` to binary's directory (adjust path)<br>
   `cd /opt/jetbrains-toolbox-2.1.0.18144`
-3) Execute the **jetbrains-toolbox** binary (adjust path)<br>
+4. Execute the **jetbrains-toolbox** binary (adjust path)<br>
   `./jetbrains-toolbox`
 
 # Fix **"dlopen(): error loading libfuse.so.2"** and **"AppImages require FUSE to run"** error
