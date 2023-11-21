@@ -27,4 +27,8 @@ Download the latest .iso from <https://ubuntu.com/download/desktop>
 > sudo usermod -a -G vboxusers steve
 > ```
 
+## Create Virtual Machine
+
+Follow the instructions <https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#2-create-a-new-virtual-machine>
+
 
