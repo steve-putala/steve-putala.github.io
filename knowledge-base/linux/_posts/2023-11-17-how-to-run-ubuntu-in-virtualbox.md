@@ -13,7 +13,7 @@ references:
 
 ## Install VirtualBox and download Ubuntu
 
-Install VirtualBox from my [instructions to install VirtualBox on Ubuntu Linux]({% link knowledge-base/linux/software/install-virtualbox-on-ubuntu-linux.md %})
+Install VirtualBox from my [instructions to install VirtualBox on Ubuntu Linux]({% link knowledge-base/linux/software/_posts/2023-11-17-install-virtualbox-on-ubuntu-linux.md %})
 
 Download the latest .iso from <https://ubuntu.com/download/desktop>
 
